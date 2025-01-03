@@ -1,0 +1,212 @@
+@charset "UTF-8";
+
+/* 헤더 */
+header {
+    width: 100%;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.6);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+}
+
+.main_img {
+	background-image: url(../img/applemain.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;   /* 고정 배경 */
+	width: 100%;
+	height: 200px;
+}
+
+.main_img_content {
+	display: flex;             /* Flexbox 활성화 */
+    justify-content: center;   /* 가로 가운데 정렬 */
+    align-items: center;   
+	width: 100%;
+	height: 200px;
+    font-size: 100px;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* menu */
+.menu {
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: start;
+}
+.menu .menu-left .menu-left-img{
+    height: 60px;
+}
+.menu .menu-right a {
+    display: inline-block;
+    width: 80px;
+    height: 60px;
+    /* line-height: 80px; */
+    text-align: center;
+    background-color: #ffffff;
+    color: white;
+    font-size: 30px;
+}
+
+.menu .menu-left a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu .menu-center{
+	margin-left: auto;
+}
+
+.menu .menu-center nav ul li {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: -25px;
+    height: 60px;
+    line-height: 60px;
+}
+.menu .menu-center nav ul li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 0 32px;
+    font-weight: bold;
+}
+
+.menu .menu-center nav ul li a:hover {
+    background-color: #ffe2a4;
+    color: white;
+}
+
+/* 햄버거 메뉴 버튼 */
+.bars {
+    display: inline-block;
+    position: relative;
+    width: 32px;
+    height: 24px;
+    top: 10px;
+    left: 3px;
+    /* background-color: rebeccapurple; */
+    cursor: pointer;
+}
+
+
+#bars { display: none; position: absolute; }
+
+.bar {
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    transition: all 0.4s;
+    opacity: 1;
+}
+
+.bar.top { top: 0; left: 0; }
+.bar.mid { top: 50%; left: 0; transform: translateY(-50%); }
+.bar.bottom { bottom: 0; left: 0; }
+
+
+/* 햄버거 메뉴 체크 애니메이션 */
+#bars:checked ~ header .bars .top {
+    transform: rotate(45deg) translate(3px, -1px);
+    transform-origin: top left;
+}
+#bars:checked ~ header .bars .mid {
+    opacity: 0;
+}
+#bars:checked ~ header .bars .bottom {
+    transform: rotate(-45deg) translate(-1px, 3px);
+    transform-origin: top left;
+}
+
+/* 사이드바 */
+.sidebar {
+    width: 330px;
+    height: calc(100vh - 120px);
+    box-shadow: -2px 2px 5px rgba(0,0,0,0.6);
+    position: fixed;
+    top: 65px; /* 이게 사이드바 높이 위치 */
+    right: -330px;
+    transition: all 0.5s;
+    z-index: 20;
+    background-color: white;
+}
+/* 햄버거 메뉴 체크시 사이드바 슬라이드 */
+#bars:checked ~ .sidebar { right: 0; }
+
+.sidebar .sidemenu li { border-bottom: 1px solid black; }
+.sidebar .sidemenu li a { display: inline-block; width: 100%;  height: 100%; padding: 15px; } 
+.sidebar .sidemenu li a:hover { background-color: var(--sub-color); color: white; } 
+.sidebar .sidemenu li h3 { font-size: 20px; }
+.sidebar .sidemenu li p { font-size: 12px; }
+
+
+
+
+
+/* 플로팅 버튼 */
+.floating {
+    position: fixed;
+    right: 40px;
+    bottom: 80px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.6);
+    z-index: 30;
+}
+
+.floating a { 
+    display: inline-block; 
+    width: 100%;
+    height: 100%;text-align: center;
+    line-height: 47px;
+    color: var(--sub-color);
+    font-size: 40px;
+    user-select: none;
+}
+
+html { scroll-behavior: smooth; }
+
+
+/* =========== 푸터 :  ========== */
+footer {
+    width: 100%;
+/*     min-height: 250px; */
+    min-height: 40vh;
+    background-color: #ffe2a4;
+    margin-top: 50px;
+    position: relative;
+    color: rgb(0, 0, 0);
+}
+footer .footer-menu {
+    display: flex;
+    justify-content: center;
+    column-gap: 400px;
+    padding-top: 50px;
+    padding-right: 200px;
+}
+footer .footer-menu .site-map {
+    display: flex;
+    column-gap: 100px;
+}
+footer .footer-menu .site-map .item ul li {
+    margin: 20px 0;
+}
+footer .footer-menu .family-site {}
+footer .footer-menu .family-site select {
+    position: relative;
+    padding: 10px 30px;
+    top: 15px;left: 60px;
+}
+footer .copy {
+    text-align: center;
+    padding: 50px;
+}

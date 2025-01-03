@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+* { margin: 0; padding: 0;box-sizing: border-box;}
+
+.container{
+ width: 1200px;
+ margin: 0 auto;
+ text-align: center;
+ 
+ 
+}
+
+option{
+	padding-left: 5px;
+	padding-right:5px;
+}
+.title-box{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    
+   
+}
+
+
+
+.inputed{
+    border: 3px solid #000;
+    width: 100%;
+	padding: 25px;
+	border-radius: 5%;
+    
+}
+
+.input-group{
+    margin: 10px;
+}
+
+.button{
+    margin: 10px;
+    display: flex;
+    justify-content: right;
+}
+.button #main, #insert{
+    cursor: pointer;
+    margin: 5px;
+    padding: 10px;
+    
+}
+
+.button #insert:hover{
+    background-color: rgb(235, 171, 98);
+   
+    
+}
+
+.button #main:hover{
+  
+    background-color: rgb(24, 255, 139);
+    
+}
+
+.button #insert{
+    background-color: rgb(241, 157, 60);
+    font-size: large;
+    border-radius: 10%;
+}
+
+.button #main{
+    background-color: rgb(86, 182, 86);
+   
+    font-size: large;
+    border-radius: 10%;
+}
+
+#input_title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+#img_input{
+    display: flex;
+    justify-content: center;
+
+.main-title{
+
+ margin: 5px;
+}
+  
+}
+
+#content{
+    padding: 20px;
+    font-size: 20px;
+}

@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+.card-box {
+    display: flex;
+    flex-wrap: wrap; /* 카드가 줄 바꿈할 수 있도록 설정 */
+    justify-content: center; /* 카드를 중앙 정렬 */
+}
+.card {
+    width: 100%;
+    max-width: 300px;
+    height: 400px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 1px 3px 3px rgba(0,0,0,0.6);
+    overflow: hidden;
+}
+
+.container1{
+	text-align: center;
+	 margin: 0 auto;
+}
+
+.createbtn{
+	cursor:pointer;
+	padding: 10px;
+	 border-radius: 10px;
+}
+
+.search-button{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 15px;
+	 border-radius: 10px;
+	 cursor: pointer;
+	
+}
+
+.createbtn:hover{
+	box-shadow: 1px 3px 3px rgba(0,0,0,0.6);
+}
+.creates{
+	display:flex;
+	justify-content:flex-end;
+	padding: 10px;
+	margin-bottom: 30px;
+	
+	
+
+}
+
+.card {
+    width: 100%;
+    max-width: 300px;
+    height: 400px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 1px 3px 3px rgba(0,0,0,0.6);
+    overflow: hidden;
+}
+
+.manin-list{
+	margin: 40px;
+	font-size: 30px;
+	text-align: center;
+}
+.card-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-row {
+   display: flex;
+    justify-content: center; /* 카드 행 중앙 정렬 */
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.card {
+ flex: 0 0 calc(20% - 20px); /* 5개씩 나열되도록 설정 (여백 포함) */
+    margin: 10px;
+    box-sizing: border-box;
+     max-width: 300px; /* 원하는 최대 너비 설정 */
+}
+
+.card .card-title {
+    text-align: center;
+    font-size: var(--text-title);
+    margin-top: 10px;
+}
+.card .card-content {
+    font-size: var(--text-normal);
+    padding: 10px 20px 40px;
+}
+.card .card-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card .card-bottom i {
+    font-size: 32px;
+    color: #FC4668;
+}
